@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
 import { useState } from "react";
+import Pokedex from "./Pages/Pokedex";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element= {<Login setNewName={setNewName} trainerName={trainerName}/>}/>
-        <Route path="/pokedex" element= {<h1>Pokedex</h1>}/>
+        <Route path="/pokedex" element= {<Pokedex/>}/>
         <Route path="*" element= {<h1>Não encontrado 404</h1>}/>
       </Routes>
     </BrowserRouter>

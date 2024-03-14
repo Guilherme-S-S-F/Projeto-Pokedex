@@ -1,0 +1,22 @@
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin: 40px;
+}
+
+.search-button > input {
+    width: 40%;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 16px;
+    outline: none;
+    border: 1px solid black;
+
+}
+
+.search-button > button {
+    width: 5%;
+    height: 30px;
+}
