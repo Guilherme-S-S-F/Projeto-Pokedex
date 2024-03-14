@@ -2,7 +2,7 @@
     display: flex;
     text-align: center;
     flex-direction: column;
-    background-color: pink;
+    background-color: var(--color-blue);
     padding: 100px;
     border-radius: 32px;
 }

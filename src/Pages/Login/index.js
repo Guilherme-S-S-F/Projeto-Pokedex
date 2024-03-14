@@ -2,7 +2,7 @@ import { useState } from 'react';
 import LoginForms from '../../Components/LoginForms';
 import './Login.css';
 
-export default function Login( { setNewName, trainerName } ) {
+export default function Login( { setNewTrainer, trainer } ) {
 
     const [change, setChange] = useState(false);
 
@@ -16,7 +16,7 @@ export default function Login( { setNewName, trainerName } ) {
             <section className='login-page'>
                 <img draggable={false} src='./images/pikachu.png'/>
                 <div className='login-data'>
-                    <LoginForms setNewName={setNewName} trainerName={trainerName} setChange={setChange} />
+                    <LoginForms setNewTrainer={setNewTrainer} trainer={trainer} setChange={setChange} />
                 </div>
             </section>
             )

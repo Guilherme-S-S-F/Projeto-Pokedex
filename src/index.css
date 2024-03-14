@@ -1,3 +1,11 @@
+:root {
+  --color-dark-blue: #1B53BA;
+  --color-blue: #51BBFE;
+  --color-yellow: #E6BC2F;
+  --color-orange: #EE6B2F;
+}
+
+
 body {
   margin: 0;
   padding: 0;

@@ -4,17 +4,22 @@ import { useState } from "react";
 
 function App() {
 
-  const [trainerName, setTrainerName] = useState('');
+  const [trainer, setTrainer] = useState({
+    name: '',
+    gender: ''
+  });
 
-  function setNewName(newName) {
-    setTrainerName(newName)
-    console.log(trainerName);
+  function setNewTrainer(name, gender) {
+    setTrainer({
+      name,
+      gender
+    });
   }
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element= {<Login setNewName={setNewName} trainerName={trainerName}/>}/>
+        <Route path="/" element= {<Login setNewTrainer={setNewTrainer} trainer={trainer}/>}/>
         <Route path="/pokedex" element= {<h1>Pokedex</h1>}/>
         <Route path="*" element= {<h1>Não encontrado 404</h1>}/>
       </Routes>
