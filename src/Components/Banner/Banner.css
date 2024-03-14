@@ -1,0 +1,9 @@
+.banner {
+    text-align: center;
+    background-color: rgb(142, 244, 237);
+}
+
+.banner > img {
+    margin: 10px;
+    height: 15vh;
+}
