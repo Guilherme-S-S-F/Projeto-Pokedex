@@ -1,4 +1,4 @@
-import { getPokemonById, getPokemonsByName } from '../../Components/Utils';
+import { getPokemonById } from '../../Components/Utils';
 import './InitialPokemons.css';
 
 export default function InitialPokemons() {

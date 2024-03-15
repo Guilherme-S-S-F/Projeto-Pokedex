@@ -2,13 +2,14 @@ import { useState } from 'react';
 import './LoginForms.css';
 import SwitchFemaleMale from '../SwitchFemaleMale';
 import InputText from '../InputText';
+import DoctorDialog from '../DoctorDialog';
 
-export default function LoginForms( { setNewTrainer, trainer, setChange } ) {
+export default function LoginForms( { setNewTrainer, trainer, advancePage } ) {
 
     function changeToInitial() {
         if(trainer.name !== '') {
-            console.log(trainer.name)
-        }
+            advancePage(true);
+        } 
     }
 
     return(
@@ -26,6 +27,7 @@ export default function LoginForms( { setNewTrainer, trainer, setChange } ) {
                     <button onClick={(evento => changeToInitial())}>Iniciar Jornada!</button>
                 </div>
             </div>
+            {<DoctorDialog />}
         </section>
     );
 };
