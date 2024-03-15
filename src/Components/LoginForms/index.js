@@ -11,6 +11,7 @@ export default function LoginForms( { setNewTrainer, trainer, setChange } ) {
     return(
         <div className='login-card'>
             <h1>Boas vindas!</h1>
+            <p>Insira seus dados: </p>
             <input type='text' value={trainer.name} onChange={evento => setNewTrainer(evento.target.value, trainer.gender)} placeholder='Nome' required={true} />
             <div className='switch-malefemale'>
                 <p>Mulher</p>

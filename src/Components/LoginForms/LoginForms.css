@@ -3,8 +3,26 @@
     text-align: center;
     flex-direction: column;
     background-color: var(--color-blue);
-    padding: 100px;
+    padding: 30px;
     border-radius: 32px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+.login-card > h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.login-card > p {
+    margin-bottom: 10px;
+}
+
+.login-card > input {
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .switch-malefemale {
@@ -12,6 +30,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .switch {
