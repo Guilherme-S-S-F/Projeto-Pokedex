@@ -12,7 +12,7 @@ function App() {
 
   function setNewTrainer(name, gender) {
     setTrainer({
-      name,
+      name: name.trim(),
       gender
     });
   }

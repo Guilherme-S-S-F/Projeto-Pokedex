@@ -4,6 +4,13 @@ import SwitchFemaleMale from '../SwitchFemaleMale';
 import InputText from '../InputText';
 
 export default function LoginForms( { setNewTrainer, trainer, setChange } ) {
+
+    function changeToInitial() {
+        if(trainer.name !== '') {
+            console.log(trainer.name)
+        }
+    }
+
     return(
         <section className='login-page'>
             <div className='welcome'>
@@ -16,7 +23,7 @@ export default function LoginForms( { setNewTrainer, trainer, setChange } ) {
                     <p>Insira seus dados: </p>
                     <InputText className='login-input' setNewTrainer={setNewTrainer} trainer={trainer} label='Nome:' />
                     <SwitchFemaleMale setNewTrainer={setNewTrainer} trainer={trainer} label='Gênero:'/>
-                    <button onClick={(evento => setChange(true))}>Iniciar Jornada!</button>
+                    <button onClick={(evento => changeToInitial())}>Iniciar Jornada!</button>
                 </div>
             </div>
         </section>
