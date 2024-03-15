@@ -1,5 +1,9 @@
 .three-pokemons {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--color-dark-blue);
 }
 
 .three-pokemons > header {
@@ -9,6 +13,12 @@
     background-color: var(--color-yellow);
 }
 
+.three-pokemons > h1 {
+    margin-top: 40px;
+    color: white;
+    font-size: 3rem;
+}
+
 .three-pokemons > header > img {
     height: 100px;
 }
@@ -16,4 +26,12 @@
 .three-pokemons > .initial-choices {
     height: 85%;
     background-color: var(--color-dark-blue);
+}
+
+.initial-choices {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }

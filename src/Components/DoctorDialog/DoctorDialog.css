@@ -15,11 +15,12 @@
 }
 
 .balloon {
+    max-width: 600px;
     position: relative;
 }
 
 .balloon > img {
-    width: 600px;
+    width: 100%;
 }
 
 .dialog-text > p {
@@ -31,7 +32,7 @@
 .dialog-text {
     position: absolute;
     text-align: center;
-    top: 43%;
+    top: 40%;
     left: 15%;
 }
 
@@ -43,3 +44,36 @@
     color: white;
 }
 
+@media (max-width: 600px) {
+    .dialog-text {
+        top: 42%;
+        left: 25%;
+    }
+
+    .dialog-text > p {
+        font-size: 1rem;
+    }
+
+    .dialog-text > button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .dialog-text {
+        left: 20%;
+    }
+
+    .dialog-text > p {
+        font-size: 0.8rem;
+    }
+
+    .dialog-text > button {
+        font-size: 0.8rem;
+        margin-top: -30px;
+    }
+
+    .doctor-dialog {
+        height: 120vh;
+    }
+}

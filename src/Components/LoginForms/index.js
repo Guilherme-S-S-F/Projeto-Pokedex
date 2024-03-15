@@ -28,14 +28,14 @@ export default function LoginForms( { setNewTrainer, trainer, advancePage } ) {
             </div>
             <div className='login-data'>
                 <div className='login-card'>
-                    <h1>Boas vindas ao<br/>Pokemon!</h1>
+                    <h1>Boas vindas ao Pokemon!</h1>
                     <p>Insira seus dados: </p>
                     <InputText className='login-input' setNewTrainer={setNewTrainer} trainer={trainer} label='Nome:' />
                     <SwitchFemaleMale setNewTrainer={setNewTrainer} trainer={trainer} label='Gênero:'/>
                     <button onClick={(evento => showDialog())}>Iniciar Jornada!</button>
                 </div>
             </div>
-            {isDialogVisible ? (<DoctorDialog changeToInitial={changeToInitial}/>) : null}
+            {isDialogVisible ? (<DoctorDialog name={trainer.name} changeToInitial={changeToInitial}/>) : null}
         </section>
     );
 };
