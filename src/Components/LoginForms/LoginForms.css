@@ -33,6 +33,10 @@
     color: white;
 }
 
+.login-card > button:hover {
+    cursor: pointer;
+}
+
 .login-page {
     position: relative;
     display: flex;
