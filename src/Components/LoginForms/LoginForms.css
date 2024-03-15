@@ -3,7 +3,7 @@
     text-align: center;
     flex-direction: column;
     background-color: var(--color-blue);
-    padding: 30px 70px;
+    padding: 30px 40px;
     border-radius: 32px;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
