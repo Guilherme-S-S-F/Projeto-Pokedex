@@ -1,6 +1,6 @@
 .banner {
     text-align: center;
-    background-color: rgb(142, 244, 237);
+    background-color: var(--color-blue);
 }
 
 .banner > img {
