@@ -11,6 +11,8 @@ export default function LoginForms( { setNewTrainer, trainer, advancePage } ) {
     function showDialog() {
         if(trainer.name !== '') {
             setDialogVisibility(true);
+        } else {
+            alert('Você deve preencher o campo nome!');
         }
     }
 
