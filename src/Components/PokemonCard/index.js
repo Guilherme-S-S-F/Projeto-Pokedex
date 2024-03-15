@@ -6,10 +6,17 @@ export default function PokemonCard() {
         <div className="pokemon-card">
             <img src="./images/001.png"/>
             <div>
-                <h3>Pokemon</h3>
-                <div className="types">
-                    <PokemonType type="Grass" color="#0d892e" textColor="#fff"/>
-                    <PokemonType type="Fire" color="#ff2032" textColor="#fff"/>
+                <div className="basic-info">
+                    <h3>Pokemon</h3>
+                    <div className="types">
+                        <PokemonType type="Grass" color="#0d892e" textColor="#fff"/>
+                        <PokemonType type="Fire" color="#ff2032" textColor="#fff"/>                    
+                    </div>
+                </div>
+                <div className="info">
+                    <p>Attack 40.0</p>
+                    <p>Defense 100.0</p>
+                    <p>Speed 20.0</p>
                 </div>
             </div>
         </div>
