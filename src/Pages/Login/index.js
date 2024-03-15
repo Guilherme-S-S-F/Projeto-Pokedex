@@ -15,7 +15,8 @@ export default function Login( { setNewTrainer, trainer } ) {
             return(
             <section className='login-page'>
                 <div className='welcome'>
-                    <img draggable={false} src='./images/pikachu.png'/>
+                    <img src='./images/pokemon-logo-4-1.png'/>
+                    <img draggable={false} src='./images/pikachuLogin.png'/>
                 </div>
                 <div className='login-data'>
                     <LoginForms setNewTrainer={setNewTrainer} trainer={trainer} setChange={setChange} />

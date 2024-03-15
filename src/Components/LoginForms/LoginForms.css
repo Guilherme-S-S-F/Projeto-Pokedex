@@ -3,22 +3,39 @@
     text-align: center;
     flex-direction: column;
     background-color: var(--color-blue);
-    padding: 30px;
+    padding: 30px 70px;
     border-radius: 32px;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
 }
 
+.login-card > .input-name {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.login-card > p {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.input-name > p {
+    margin-left: 8px;
+    margin-bottom: 4px;
+}
+
 .login-card > h1 {
     font-size: 3rem;
     margin-bottom: 50px;
+    color: white;
 }
 
 .login-card > p {
     margin-bottom: 10px;
 }
 
-.login-card > input {
+.input-name > input {
     border: none;
     border-radius: 12px;
     padding: 10px;
@@ -85,4 +102,12 @@ input:checked + .slider:before {
   
 .slider.round:before {
     border-radius: 50%;
+}
+
+.login-card > button {
+    font-size: 2rem;
+    background-color: var(--color-yellow);
+    padding: 15px;
+    border-radius: 32px;
+    color: white;
 }
