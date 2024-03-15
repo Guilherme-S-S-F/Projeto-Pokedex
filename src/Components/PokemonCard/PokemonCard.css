@@ -1,6 +1,7 @@
 .pokemon-card {
     width: 250px;
     padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -8,4 +9,9 @@
     background-color: beige;
     border-radius: 8px;
     width: 100%;
+}
+
+.pokemon-card .types {
+    display: flex;
+    flex-wrap: wrap;
 }

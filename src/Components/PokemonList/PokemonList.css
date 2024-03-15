@@ -1,6 +1,20 @@
 .pokemon-list {
     padding: 100px;
-    margin: 50px 200px;
+    margin: 0px 200px;
     background-color: #fff;
     border-radius: 32px;
+}
+.pokemon-list .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .pokemon-list {
+        padding: 20px;
+        margin: 20px 20px;
+    }
 }

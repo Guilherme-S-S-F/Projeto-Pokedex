@@ -6,6 +6,9 @@ export default function PokemonList() {
         <section className="pokemon-list">
             <div className="container">
                 <PokemonCard />
+                <PokemonCard />
+                <PokemonCard />
+                <PokemonCard />
             </div>
         </section>
     );
