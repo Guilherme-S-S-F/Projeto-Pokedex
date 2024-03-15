@@ -1,0 +1,19 @@
+.three-pokemons {
+    height: 100vh;
+}
+
+.three-pokemons > header {
+    display: flex;
+    justify-content: center;
+    height: 15%;
+    background-color: var(--color-yellow);
+}
+
+.three-pokemons > header > img {
+    height: 100px;
+}
+
+.three-pokemons > .initial-choices {
+    height: 85%;
+    background-color: var(--color-dark-blue);
+}

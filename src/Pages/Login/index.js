@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import LoginForms from '../../Components/LoginForms';
 import './Login.css';
+import InitialPokemons from '../InitialPokemons';
 
 export default function Login( { setNewTrainer, trainer } ) {
 
@@ -9,20 +10,12 @@ export default function Login( { setNewTrainer, trainer } ) {
     function changeLoginScreen(change) {
         if(change) {
             return (
-                <div>3 pokemon</div>
-            )
+                <InitialPokemons />
+            );
         } else {
             return(
-            <section className='login-page'>
-                <div className='welcome'>
-                    <img draggable={false} src='./images/pokemon-logo-4-1.png'/>
-                    <img draggable={false} src='./images/pikachuLogin.png'/>
-                </div>
-                <div className='login-data'>
-                    <LoginForms setNewTrainer={setNewTrainer} trainer={trainer} setChange={setChange} />
-                </div>
-            </section>
-            )
+                <LoginForms setNewTrainer={setNewTrainer} trainer={trainer} setChange={setChange} />
+            );
         }
     }
 

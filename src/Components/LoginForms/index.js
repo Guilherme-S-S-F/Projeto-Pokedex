@@ -1,33 +1,24 @@
 import { useState } from 'react';
 import './LoginForms.css';
+import SwitchFemaleMale from '../SwitchFemaleMale';
+import InputText from '../InputText';
 
 export default function LoginForms( { setNewTrainer, trainer, setChange } ) {
-
-    function atGenderChange(gender) {
-        gender = !trainer.gender;
-        setNewTrainer(trainer.name, gender);
-    }
-
-
-
     return(
-        <div className='login-card'>
-            <h1>Boas vindas ao<br/>Pokemon!</h1>
-            <p>Insira seus dados: </p>
-            <div className='input-name'>
-                <p>Nome</p>
-                <input type='text' value={trainer.name} onChange={evento => setNewTrainer(evento.target.value, trainer.gender)} placeholder='Insira seu nome' required={true} />
+        <section className='login-page'>
+            <div className='welcome'>
+                <img draggable={false} src='./images/pokemon-logo-4-1.png'/>
+                <img draggable={false} src='./images/pikachuLogin.png'/>
             </div>
-            <p>Gênero:</p>
-            <div className='switch-malefemale'>
-                <p>Mulher</p>
-                <label className="switch">
-                    <input type="checkbox" value={trainer.gender} onChange={evento => atGenderChange(trainer.gender)}/>
-                    <span className="slider round"></span>
-                </label> 
-                <p>Homem</p>
+            <div className='login-data'>
+                <div className='login-card'>
+                    <h1>Boas vindas ao<br/>Pokemon!</h1>
+                    <p>Insira seus dados: </p>
+                    <InputText className='login-input' setNewTrainer={setNewTrainer} trainer={trainer} label='Nome:' />
+                    <SwitchFemaleMale setNewTrainer={setNewTrainer} trainer={trainer} label='Gênero:'/>
+                    <button onClick={(evento => setChange(true))}>Iniciar Jornada!</button>
+                </div>
             </div>
-            <button onClick={(evento => setChange(true))}>Iniciar Jornada!</button>
-        </div>
+        </section>
     );
 };
