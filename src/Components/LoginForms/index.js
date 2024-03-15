@@ -6,6 +6,14 @@ import DoctorDialog from '../DoctorDialog';
 
 export default function LoginForms( { setNewTrainer, trainer, advancePage } ) {
 
+    const [isDialogVisible, setDialogVisibility] = useState(false);
+
+    function showDialog() {
+        if(trainer.name !== '') {
+            setDialogVisibility(true);
+        }
+    }
+
     function changeToInitial() {
         if(trainer.name !== '') {
             advancePage(true);
@@ -24,10 +32,10 @@ export default function LoginForms( { setNewTrainer, trainer, advancePage } ) {
                     <p>Insira seus dados: </p>
                     <InputText className='login-input' setNewTrainer={setNewTrainer} trainer={trainer} label='Nome:' />
                     <SwitchFemaleMale setNewTrainer={setNewTrainer} trainer={trainer} label='Gênero:'/>
-                    <button onClick={(evento => changeToInitial())}>Iniciar Jornada!</button>
+                    <button onClick={(evento => showDialog())}>Iniciar Jornada!</button>
                 </div>
             </div>
-            {<DoctorDialog />}
+            {isDialogVisible ? (<DoctorDialog changeToInitial={changeToInitial}/>) : null}
         </section>
     );
 };

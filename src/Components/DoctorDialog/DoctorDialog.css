@@ -1,0 +1,45 @@
+.doctor-dialog {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.doctor-dialog > img {
+    margin-top: -90px;
+    height: 220px;
+}
+
+.balloon {
+    position: relative;
+}
+
+.balloon > img {
+    width: 600px;
+}
+
+.dialog-text > p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.dialog-text {
+    position: absolute;
+    text-align: center;
+    top: 43%;
+    left: 15%;
+}
+
+.dialog-text > button {
+    border-radius: 16px;
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    background-color: var(--color-yellow);
+    color: white;
+}
+
