@@ -20,6 +20,7 @@
 
 .trainer {
     margin-top: 10px;
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
 }
 
 .trainer-page-profile {
@@ -55,12 +56,11 @@
 .trainer-pokemon-list > .pokemon-list {
     padding: 60px;
     margin: 0px 50px 20px 30px;
+    border-radius: 32px 10px 10px 32px;
+    height: 400px;
 }
 
 @media (max-width: 950px) {
-    .trainer-pokemon-list > .pokemon-list > .container > .pokemon-card {
-        width: 150px;
-    }
 
     .trainer-pokemon-list > .pokemon-list {
         padding: 20px 0px;
@@ -84,10 +84,7 @@
 
     .trainer-pokemon-list > .pokemon-list {
         margin: 0px 10px;
-    }
-
-    .trainer-pokemon-list > .pokemon-list > .container > .pokemon-card {
-        width: 120px;
+        height: 600px;
     }
 }
 
