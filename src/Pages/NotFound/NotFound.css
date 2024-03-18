@@ -1,0 +1,29 @@
+.notfound {
+    height: 100vh;
+    background-color: var(--color-dark-blue);
+}
+
+.notfound > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.notfound > div > h1 {
+    margin: 30px;
+    font-size: 2rem;
+    color: white;
+}
+
+.notfound > div > img {
+    max-width: 450px;
+    width: 100%;
+}
+
+.notfound > div > h2 {
+    font-size: 2rem;
+    color: white;
+    margin-top: 20px;
+}
