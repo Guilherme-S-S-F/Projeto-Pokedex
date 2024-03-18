@@ -1,11 +1,12 @@
 .pokemon-list {
-    padding: 100px;
+    padding: 60px;
     margin: 0px 200px 30px 200px;
     background-color: #fff;
     border-radius: 32px 10px 10px 32px;
     height: 60vh;
     overflow-y: scroll;
     box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+    
 }
 .pokemon-list .container {
     display: flex;

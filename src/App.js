@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import Login from "./Pages/Login";
 import { useState } from "react";
 import Pokedex from "./Pages/Pokedex";

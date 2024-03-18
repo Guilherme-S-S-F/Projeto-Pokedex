@@ -1,9 +1,0 @@
-.banner {
-    text-align: center;
-    background-color: var(--color-blue);
-}
-
-.banner > img {
-    margin: 10px;
-    height: 15vh;
-}

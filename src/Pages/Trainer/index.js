@@ -1,10 +1,10 @@
 import Header from '../../Components/Header';
 import PokemonList from '../../Components/PokemonList';
 import TrainerProfile from '../../Components/TrainerProfile';
-import { getPokemonList, getPokemonsByName } from '../../Components/Utils';
+import { getPokemonList } from '../../Components/Utils';
 import './Trainer.css';
 
-export default function Trainer( { trainer } ) {
+export default function Trainer( { goToPokedex, trainer } ) {
 
     let pokemons = getPokemonList();
 
