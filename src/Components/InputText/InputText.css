@@ -12,6 +12,10 @@
     text-align: left;
 }
 
+.input-text > input:focus {
+    outline: none;
+}
+
 .input-text > p {
     margin-left: 8px;
     margin-bottom: 4px;

@@ -6,7 +6,7 @@ export default function DoctorDialog({ name, changeToInitial }) {
             <div className='balloon'>
                 <img src='./images/dialog-balloon.png'/>
                 <div className='dialog-text'>
-                    <p>Olá, {name},<br/>antes de iniciar a jornada,<br/> você deve escolher um pokemon inicial!</p>
+                    <p>Olá, {name}!<br/>Antes de iniciar a jornada,<br/> você deve escolher um pokémon inicial!</p>
                     <button onClick={evento => changeToInitial(true)}>Escolher</button>
                 </div>
             </div>

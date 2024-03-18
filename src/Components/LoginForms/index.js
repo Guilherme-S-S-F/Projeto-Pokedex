@@ -30,7 +30,7 @@ export default function LoginForms( { setNewTrainer, trainer, advancePage } ) {
             </div>
             <div className='login-data'>
                 <div className='login-card'>
-                    <h1>Boas vindas ao Pokemon!</h1>
+                    <h1>Boas vindas ao Pokémon!</h1>
                     <p>Insira seus dados: </p>
                     <InputText className='login-input' setNewTrainer={setNewTrainer} trainer={trainer} label='Nome:' />
                     <SwitchFemaleMale setNewTrainer={setNewTrainer} trainer={trainer} label='Gênero:'/>

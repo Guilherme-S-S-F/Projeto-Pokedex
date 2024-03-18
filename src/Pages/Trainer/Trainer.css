@@ -1,0 +1,93 @@
+.trainer-page {
+    min-height: 100vh;
+}
+
+.trainer-page > h1 {
+    font-size: 3rem;
+    background-color: var(--color-dark-blue);
+    text-align: center;
+    padding: 20px 0px 20px 170px;
+    color: white;
+}
+
+.trainer-and-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 85vh;
+    background-color: var(--color-dark-blue);
+}
+
+.trainer {
+    margin-top: 10px;
+}
+
+.trainer-page-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.trainer-page-profile > h2 {
+    font-size: 3rem;
+    background-color: var(--color-dark-blue);
+    text-align: center;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.trainer-pokemon-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0px;
+}   
+
+.trainer-pokemon-list > h1 {
+    font-size: 3rem;
+    background-color: var(--color-dark-blue);
+    text-align: center;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.trainer-pokemon-list > .pokemon-list {
+    padding: 60px;
+    margin: 0px 50px 20px 30px;
+}
+
+@media (max-width: 950px) {
+    .trainer-pokemon-list > .pokemon-list > .container > .pokemon-card {
+        width: 150px;
+    }
+
+    .trainer-pokemon-list > .pokemon-list {
+        padding: 20px 0px;
+    }
+}
+
+@media (max-width: 700px) {
+    .trainer-page > div {
+        flex-direction: column;
+    }
+
+    .trainer-page-profile {
+        margin: 0;
+    }
+
+    .trainer-and-list {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .trainer-pokemon-list > .pokemon-list {
+        margin: 0px 10px;
+    }
+
+    .trainer-pokemon-list > .pokemon-list > .container > .pokemon-card {
+        width: 120px;
+    }
+}
+
