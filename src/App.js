@@ -3,12 +3,13 @@ import Login from "./Pages/Login";
 import { useState } from "react";
 import Pokedex from "./Pages/Pokedex";
 import Trainer from "./Pages/Trainer";
+import NotFound from "./Pages/NotFound";
 
 function App() {
 
   const [trainer, setTrainer] = useState({
     name: '',
-    gender: ''
+    gender: false
   });
 
   function setNewTrainer(name, gender) {
@@ -24,7 +25,7 @@ function App() {
         <Route path="/" element= {<Login setNewTrainer={setNewTrainer} trainer={trainer} />}/>
         <Route path="/pokedex" element= {<Pokedex />}/>
         <Route path="/Trainer" element= {<Trainer trainer={trainer}/>}/>
-        <Route path="*" element= {<h1>Não encontrado 404</h1>}/>
+        <Route path="*" element= {<NotFound />}/>
       </Routes>
     </BrowserRouter>
   );
