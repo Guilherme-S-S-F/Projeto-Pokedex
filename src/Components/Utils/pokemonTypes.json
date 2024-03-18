@@ -1,0 +1,81 @@
+[{
+    "type":"Grass",
+    "color":"#50b309",
+    "textColor":"#fff"
+},
+{
+    "type":"Poison",
+    "color":"#b309aa",
+    "textColor":"#fff"
+},
+{
+    "type":"Fire",
+    "color":"#ff7221",
+    "textColor":"#fff"
+},
+{
+    "type":"Flying",
+    "color":"#cadce6",
+    "textColor":"#000000"
+},
+{
+    "type":"Water",
+    "color":"#07a2f5",
+    "textColor":"#000000"
+},
+{
+    "type":"Bug",
+    "color":"#1cd400",
+    "textColor":"#FFF"
+},
+{
+    "type":"Normal",
+    "color":"#a8b0a7",
+    "textColor":"#000000"
+},
+{
+    "type":"Electric",
+    "color":"#eaff00",
+    "textColor":"#000000"
+},
+{
+    "type":"Ground",
+    "color":"#4d2a09",
+    "textColor":"#fff"
+},
+{
+    "type":"Fighting",
+    "color":"#e0070a",
+    "textColor":"#fff"
+},
+{
+    "type":"Fairy",
+    "color":"#e007c0",
+    "textColor":"#fff"
+},
+{
+    "type":"Psychic",
+    "color":"#f441fa",
+    "textColor":"#fff"
+},
+{
+    "type":"Rock",
+    "color":"#4a4a4a",
+    "textColor":"#fff"
+},
+{
+    "type":"Steel",
+    "color":"#cfcfcf",
+    "textColor":"#000000"
+},
+{
+    "type":"Ice",
+    "color":"#00f0d4",
+    "textColor":"#000000"
+},
+{
+    "type":"Ghost",
+    "color":"#580075",
+    "textColor":"#fff"
+}
+]

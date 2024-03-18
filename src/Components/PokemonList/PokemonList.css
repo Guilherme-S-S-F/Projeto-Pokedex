@@ -3,6 +3,8 @@
     margin: 0px 200px;
     background-color: #fff;
     border-radius: 32px;
+    height: 60vh;
+    overflow-y: scroll;
 }
 .pokemon-list .container {
     display: flex;

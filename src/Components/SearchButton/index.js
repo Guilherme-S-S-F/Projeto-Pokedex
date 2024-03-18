@@ -1,10 +1,21 @@
+import { useState } from 'react';
 import './SearchButton.css';
 
-export default function SearchButton() {
+export default function SearchButton({buttonClick}) {
+    let [value,setValue] = useState('');
+
+    const onSearch = () => {
+        buttonClick(value);
+    }
+
+    const onSearchChange = (evt) => {
+        setValue(evt.target.value);
+    }
+
     return (
         <div className='search-button'>
-            <input type='text' placeholder='Pesquise um pokémon' />
-            <button><img src='./images/Icons/magnifying-glass-solid.svg'></img></button>
+            <input type='text'value={value} onChange={evt => onSearchChange(evt)} placeholder='Pesquise um pokémon' />
+            <button onClick={onSearch}><img src='./images/Icons/magnifying-glass-solid.svg'></img></button>
         </div>
     );
 }
