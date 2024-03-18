@@ -3,6 +3,7 @@ import Banner from '../../Components/Banner';
 import './Pokedex.css';
 import PokemonList from '../../Components/PokemonList';
 import { useState } from 'react';
+import { getPokemonList, getPokemonsByName } from "../../Components/Utils";
 
 export default function Pokedex() {
 
@@ -12,11 +13,13 @@ export default function Pokedex() {
         setSearch(value);
     };
 
+    let pokemons = (search !== "")? getPokemonsByName(search) : getPokemonList();    
+
     return (
         <section className='pokedex'>
             <Banner/>
             <SearchButton buttonClick={e => searchClick(e)}/>
-            <PokemonList search={search} />
+            <PokemonList list={pokemons} />
         </section>
     );
 }
