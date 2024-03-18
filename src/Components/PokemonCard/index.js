@@ -1,22 +1,36 @@
 import PokemonType from "../PokemonType";
+import { getPokemonType } from "../Utils";
 import "./PokemonCard.css"
 
-export default function PokemonCard() {
+export default function PokemonCard({name, types, base,id}) {
+    const addZeros = (num) => {
+        num = num.toString();
+        let len = num.length;
+        if(len !== 3) {
+            (len === 1) ? num="00"+num : num="0"+num;
+        } 
+        return num
+    }
+
+    let imagePath = "./images/Pokemons/" + addZeros(id) + ".png";
     return (
         <div className="pokemon-card">
-            <img src="./images/001.png"/>
+            <img src={imagePath}/>
             <div>
                 <div className="basic-info">
-                    <h3>Pokemon</h3>
+                    <h3>{name}</h3>
                     <div className="types">
-                        <PokemonType type="Grass" color="#0d892e" textColor="#fff"/>
-                        <PokemonType type="Fire" color="#ff2032" textColor="#fff"/>                    
+                    {types.map((type, index) => (                        
+                        <PokemonType type={type} color={getPokemonType(type).color} textColor={getPokemonType(type).textColor}/>))}            
                     </div>
                 </div>
                 <div className="info">
-                    <p>Attack 40.0</p>
-                    <p>Defense 100.0</p>
-                    <p>Speed 20.0</p>
+                    <p>HP {base['HP']}</p>
+                    <p>Attack {base['Attack']}</p>
+                    <p>Defense {base['Defense']}</p>
+                    <p>Sp. Attack {base['Sp. Attack']}</p>
+                    <p>Sp. Defense {base['Sp. Defense']}</p>
+                    <p>Speed {base['Speed']}</p>
                 </div>
             </div>
         </div>
