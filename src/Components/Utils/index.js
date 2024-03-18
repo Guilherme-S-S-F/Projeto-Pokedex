@@ -21,4 +21,3 @@ export function getPokemonsByName(name) {
         return pokemon.name.english.toLowerCase().includes(name.toLowerCase());
     });
 }
-

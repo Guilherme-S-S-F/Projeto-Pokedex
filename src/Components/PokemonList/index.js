@@ -5,7 +5,6 @@ import "./PokemonList.css";
 export default function PokemonList({search}) {
     let pokemons = (search !== "")? getPokemonsByName(search) :getPokemonList();
     
-
     return (
         <section className="pokemon-list">
             <div className="container">

@@ -14,7 +14,7 @@ export default function Trainer( { trainer } ) {
                 </div>
                 <div className='trainer-pokemon-list'>
                     <h1>Meus Pokémons</h1>
-                    <PokemonList />
+                    <PokemonList search=''/>
                 </div>
             </div>
         </section>
