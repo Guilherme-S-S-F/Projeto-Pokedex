@@ -1,20 +1,27 @@
 .doctor-dialog {
     position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    
 }
 
 .doctor-dialog > img {
-    margin-top: -90px;
+    position: absolute;
+    max-width: 100%;
     height: 220px;
+    bottom: 0;
 }
 
 .balloon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 600px;
     position: relative;
 }
@@ -24,7 +31,7 @@
 }
 
 .dialog-text > p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 16px;
 }
@@ -32,8 +39,6 @@
 .dialog-text {
     position: absolute;
     text-align: center;
-    top: 40%;
-    left: 15%;
 }
 
 .dialog-text > button {
@@ -45,13 +50,8 @@
 }
 
 @media (max-width: 600px) {
-    .dialog-text {
-        top: 42%;
-        left: 25%;
-    }
-
     .dialog-text > p {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .dialog-text > button {
@@ -60,20 +60,16 @@
 }
 
 @media (max-width: 500px) {
-    .dialog-text {
-        left: 20%;
-    }
-
     .dialog-text > p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .dialog-text > button {
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin-top: -30px;
     }
 
-    .doctor-dialog {
+    /* .doctor-dialog {
         height: 120vh;
-    }
+    } */
 }
