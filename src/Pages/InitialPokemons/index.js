@@ -1,3 +1,4 @@
+import Header from '../../Components/Header';
 import PokemonCard from '../../Components/PokemonCard';
 import { getPokemonById } from '../../Components/Utils';
 import './InitialPokemons.css';
@@ -13,7 +14,7 @@ export default function InitialPokemons() {
 
     return (
         <div className='three-pokemons'>
-            <header><img src='./images/pokemon-logo-4-1.png' /></header>
+            <Header />
             <h1>Escolha um Pokemon inicial:</h1>
             <section className='initial-choices'>
                 <PokemonCard />
