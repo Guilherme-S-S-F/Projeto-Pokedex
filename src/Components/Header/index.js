@@ -1,24 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 export default function Header( { buttonVisibility } ) {
-
-    const navigate = useNavigate();
-
-    function goToAccount() {
-        navigate('/Trainer')
-    }
-
-    function goToPokedex() {
-        navigate('/pokedex')
-    }
 
     return (
         <header className="header">
             <img draggable={false} src='./images/pokemon-logo-4-1.png' />
             {buttonVisibility ? <>
-                <img className="header-pokedex" onClick={goToPokedex} draggable={false} src='./images/pokedex.png' />
-                <img className="header-account" onClick={goToAccount} draggable={false} src='./images/account.png' />
+                <Link to="/pokedex"><img className="header-pokedex" draggable={false} src='./images/pokedex.png' /></Link>
+                <Link to="/Trainer"><img className="header-account" draggable={false} src='./images/account.png' /></Link>
             </>
             : null}
         </header>

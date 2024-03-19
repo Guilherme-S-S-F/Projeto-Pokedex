@@ -1,13 +1,12 @@
 .pokemon-list {
-    position: relative;
     padding: 60px;
-    margin: 0px 200px 30px 200px;
     background-color: #fff;
     border-radius: 32px 10px 10px 32px;
     height: 60vh;
     width: 60vw;
     overflow-y: scroll;
     box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+    cursor: url('../../../public/images/cursor.cur'), pointer;
 }
 
 .pokemon-list > img {
@@ -37,7 +36,11 @@
 
 @media (max-width: 1024px) {
     .pokemon-list {
-        padding: 20px;
-        margin: 0px 20px 20px 20px;
+        padding: 20px 0px;
+    }
+
+    .pokemon-list {
+        width: 85vw;
+        height: 70vh;
     }
 }
