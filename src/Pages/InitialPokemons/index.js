@@ -13,6 +13,13 @@ export default function InitialPokemons({pokemonChosen}) {
         getPokemonById(4)  // Charmander
     ]
 
+    const [chosen, setChosen] = useState(-1);
+
+    const onPokemonChosen = (value) => {
+        pokemonChosen(value);
+        setChosen(value)
+    }
+
     console.log(initialPokemons);
 
     return (
@@ -21,7 +28,7 @@ export default function InitialPokemons({pokemonChosen}) {
             <Title text="Escolha um Pokemon inicial:" />
             <section className='initial-choices'>
                 {initialPokemons.map((pokemon) =>
-                    <PokemonCard chosen={(chosen === pokemon.id)} pokemonClicked={e => onPokemonClick(e)} key={pokemon.id} id={pokemon.id} base={pokemon.base} name={pokemon.name.english} types={pokemon.type}/>
+                    <PokemonCard chosen={(chosen === pokemon.id)} pokemonClicked={e => onPokemonChosen(e)} key={pokemon.id} id={pokemon.id} base={pokemon.base} name={pokemon.name.english} types={pokemon.type}/>
                 )}
             </section>
             <Link to="/Trainer"><button className='button-continue' disabled={(chosen === -1)}>Continuar</button></Link>
