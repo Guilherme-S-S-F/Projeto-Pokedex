@@ -7,10 +7,8 @@
     background-color: var(--color-dark-blue);
 }
 
-.three-pokemons > h1 {
+.three-pokemons > .title > h2 {
     margin: 40px;
-    color: white;
-    font-size: 3rem;
 }
 
 .three-pokemons > header > img {
@@ -45,4 +43,11 @@
 .button-continue:disabled {
     background-color: #747474;
     color: black;
+}
+
+@media (max-width: 450px) {
+    .three-pokemons > h1 {
+        font-size: 2rem;
+        margin: 30px;
+    }
 }

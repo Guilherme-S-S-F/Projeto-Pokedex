@@ -25,7 +25,7 @@ export default function PokemonCard({name, types, base, pokemonClicked,id, chose
                     <h3>{name}</h3>
                     <div className="types">
                     {types.map((type, index) => (                        
-                        <PokemonType type={type} color={getPokemonType(type).color} textColor={getPokemonType(type).textColor}/>))}            
+                        <PokemonType key={index} type={type} color={getPokemonType(type).color} textColor={getPokemonType(type).textColor}/>))}            
                     </div>
                 </div>
                 <div className="info">

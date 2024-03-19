@@ -2,14 +2,6 @@
     min-height: 100vh;
 }
 
-.trainer-page > h1 {
-    font-size: 3rem;
-    background-color: var(--color-dark-blue);
-    text-align: center;
-    padding: 20px 0px 20px 170px;
-    color: white;
-}
-
 .trainer-and-list {
     display: flex;
     justify-content: center;
@@ -30,13 +22,6 @@
     margin-left: 20px;
 }
 
-.trainer-page-profile > h2 {
-    font-size: 3rem;
-    background-color: var(--color-dark-blue);
-    text-align: center;
-    margin-bottom: 4px;
-    color: white;
-}
 
 .trainer-pokemon-list {
     display: flex;
@@ -44,14 +29,6 @@
     align-items: center;
     margin: 10px 0px;
 }   
-
-.trainer-pokemon-list > h1 {
-    font-size: 3rem;
-    background-color: var(--color-dark-blue);
-    text-align: center;
-    margin-bottom: 4px;
-    color: white;
-}
 
 .trainer-pokemon-list > .pokemon-list {
     padding: 60px;
