@@ -26,7 +26,7 @@ export default function Pokedex({pokemonClicked}) {
             <Title text="Pokédex" />
             <SearchButton buttonClick={e => searchClick(e)} />
             <p className="help-text">(Para capturar um pokémon, clique duas vezes. Para ver os status, clique uma vez.)</p>
-            <PokemonList onDoubleClick={true} list={pokemons} pokemonClicked={e => onPokemonClicked(e)} />
+            <PokemonList buttonText={"Capturar"} onDoubleClick={true} list={pokemons} pokemonClicked={e => onPokemonClicked(e)} />
         </section>
     );
 }

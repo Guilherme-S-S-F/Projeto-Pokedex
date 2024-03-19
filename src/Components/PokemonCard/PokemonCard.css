@@ -28,7 +28,7 @@
 }
 
 .pokemon-card:hover .basic-info {
-    transform:  translate(0,150px);
+    transform:  translate(-300px,0px);
 }
 
 .pokemon-card .info {
@@ -43,8 +43,34 @@
     justify-content: space-around;
     font-weight: bold;
     transition: all 1s ease;
-    transform: translate(0,150px);
+    transform:  translate(300px,0px);
 }
 .pokemon-card:hover .info {
     transform: translate(0px,0px);
+}
+
+.pokemon-card .button-area{
+    text-align: center;
+}
+.pokemon-card .button-area > button{
+    
+}
+
+.pokemon-card .button-area > button {
+    text-align: center;
+    font-size: 15px;
+    background-color: var(--color-yellow);
+    border-radius: 32px;
+    border: 1px solid var(--color-yellow);
+    padding: 0px 20px;
+    color: white;
+    height: 30px;
+    transition: all 0.4s ease;
+}
+
+.pokemon-card .button-area > button:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--color-yellow);
+    
 }
