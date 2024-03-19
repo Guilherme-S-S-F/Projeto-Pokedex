@@ -21,7 +21,7 @@ export default function PokemonCard({name, types, base, pokemonClicked,id, chose
     return (
         <div className={"pokemon-card" + ((chosen)? " active" : "")} onDoubleClick={ (onDoubleClick) ? onPokemonClicked : undefined}
          onClick={ !(onDoubleClick) ? onPokemonClicked : undefined}>
-            <img src={imagePath}/>
+            <img draggable={false} src={imagePath}/>
             <div>
                 <div className="basic-info">
                     <h3>{name}</h3>

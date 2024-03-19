@@ -5,7 +5,7 @@ import TrainerProfile from '../../Components/TrainerProfile';
 import { getPokemonList } from '../../Components/Utils';
 import './Trainer.css';
 
-export default function Trainer( { goToPokedex, trainer } ) {
+export default function Trainer( { trainer } ) {
 
     return (
         <section className='trainer-page'>

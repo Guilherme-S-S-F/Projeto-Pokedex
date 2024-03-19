@@ -5,7 +5,7 @@ export default function TrainerProfile({ trainer }) {
         <div className='trainer'>
             <h2>Trainer</h2>
             <img draggable={false} src={`./images/${trainer.gender ? "AshMaleTrainer" : 'LikoFemaleTrainer'}.png`}/>
-            <h1>Victor Madrid</h1>
+            <h1>{trainer.name}</h1>
         </div>
     )
 }
