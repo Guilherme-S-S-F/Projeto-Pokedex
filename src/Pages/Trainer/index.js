@@ -6,8 +6,6 @@ import './Trainer.css';
 
 export default function Trainer( { goToPokedex, trainer } ) {
 
-    let pokemons = getPokemonList();
-
     return (
         <section className='trainer-page'>
             <Header buttonVisibility={true} />
@@ -18,7 +16,7 @@ export default function Trainer( { goToPokedex, trainer } ) {
                 </div>
                 <div className='trainer-pokemon-list'>
                     <h1>Meus Pokémons</h1>
-                    <PokemonList list={pokemons} />
+                    <PokemonList list={trainer.pokemons} />
                 </div>
             </div>
         </section>
