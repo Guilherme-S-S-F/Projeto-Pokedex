@@ -2,7 +2,7 @@ import PokemonType from "../PokemonType";
 import { getPokemonType } from "../Utils";
 import "./PokemonCard.css"
 
-export default function PokemonCard({name, types, base, pokemonClicked,id}) {
+export default function PokemonCard({name, types, base, pokemonClicked,id, chosen}) {
     const addZeros = (num) => {
         num = num.toString();
         let len = num.length;
@@ -18,7 +18,7 @@ export default function PokemonCard({name, types, base, pokemonClicked,id}) {
 
     let imagePath = "./images/Pokemons/" + addZeros(id) + ".png";
     return (
-        <div className="pokemon-card" onClick={onPokemonClicked}>
+        <div className={"pokemon-card" + ((chosen)? " active" : "")} onClick={onPokemonClicked}>
             <img draggable={false} src={imagePath}/>
             <div>
                 <div className="basic-info">

@@ -28,6 +28,22 @@
     gap: 20px;
     margin-bottom: 50px;
 }
+.button-continue {
+    font-size: 2rem;
+    background-color: var(--color-yellow);
+    padding: 15px;
+    border-radius: 32px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.button-continue:hover {
+    cursor: pointer;
+}
+.button-continue:disabled {
+    background-color: #747474;
+    color: black;
+}
 
 @media (max-width: 450px) {
     .three-pokemons > h1 {

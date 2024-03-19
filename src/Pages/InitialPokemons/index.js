@@ -1,15 +1,26 @@
+import { useState } from 'react';
 import Header from '../../Components/Header';
 import PokemonCard from '../../Components/PokemonCard';
 import Title from '../../Components/Title';
 import { getPokemonById } from '../../Components/Utils';
 import './InitialPokemons.css';
+import { Link } from 'react-router-dom';
 
-export default function InitialPokemons() {
+export default function InitialPokemons({pokemonChosen}) {
     const initialPokemons = [
         getPokemonById(7), // Squirtle
         getPokemonById(1), // Bulbasaur
         getPokemonById(4)  // Charmander
     ]
+
+    const [chosen, setChosen] = useState(-1);
+
+    const onPokemonChosen = (value) => {
+        pokemonChosen(value);
+        setChosen(value)
+    }
+
+    console.log(initialPokemons);
 
     return (
         <div className='three-pokemons'>
@@ -17,9 +28,10 @@ export default function InitialPokemons() {
             <Title text="Escolha um Pokemon inicial:" />
             <section className='initial-choices'>
                 {initialPokemons.map((pokemon) =>
-                    <PokemonCard key={pokemon.id} id={pokemon.id} base={pokemon.base} name={pokemon.name.english} types={pokemon.type}/>
+                    <PokemonCard chosen={(chosen === pokemon.id)} pokemonClicked={e => onPokemonChosen(e)} key={pokemon.id} id={pokemon.id} base={pokemon.base} name={pokemon.name.english} types={pokemon.type}/>
                 )}
             </section>
+            <Link to="/Trainer"><button className='button-continue' disabled={(chosen === -1)}>Continuar</button></Link>
         </div>
     )
 }
