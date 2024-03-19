@@ -11,7 +11,7 @@
     height: 100px;
 }
 
-.header > .header-pokedex {
+.header-pokedex {
     position: absolute;
     left: 10px;
     top: 30px;
@@ -23,7 +23,7 @@
     transform: scale(1.2);
 }
 
-.header > .header-account {
+.header-account {
     position: absolute;
     right: 10px;
     top: 20px;
@@ -46,12 +46,12 @@
         height: 60px;
     }
 
-    .header > .header-pokedex {
+    .header-pokedex {
         height: 40px;
         top: 20px;
     }
 
-    .header > .header-account {
+    .header-account {
         top: 15px;
         height: 50px;
     }

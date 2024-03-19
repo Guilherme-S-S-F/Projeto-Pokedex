@@ -1,6 +1,14 @@
-.pokedex {
+.pokedex-page {
     background-color: var(--color-blue);
     height: 125vh;
+}
+
+.pokedex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .pokedex > .title > h2 {
@@ -8,7 +16,6 @@
 }
 
 .help-text {
-    margin: 4px 230px;
     color: #444343;
     font-weight: 700;
 }
@@ -16,6 +23,6 @@
 @media (max-width: 1024px) {
     .help-text {
         font-size: 0.8rem;
-        margin: 4px 30px;
+        margin: 0px 12px 4px 12px;
     }
 }
