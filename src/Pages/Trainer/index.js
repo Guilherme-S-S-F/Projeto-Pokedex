@@ -17,7 +17,7 @@ export default function Trainer( { goToPokedex, trainer } ) {
                 </div>
                 <div className='trainer-pokemon-list'>
                     <Title text="Meus Pokémons" />
-                    <PokemonList list={trainer.pokemons} />
+                    <PokemonList pokemonClicked={e => {}} onDoubleClick={false} list={trainer.pokemons} />
                 </div>
             </div>
         </section>
