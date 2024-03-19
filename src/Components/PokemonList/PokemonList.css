@@ -39,5 +39,6 @@
     .pokemon-list {
         padding: 20px;
         margin: 0px 20px 20px 20px;
+        width: 80vw;
     }
 }
