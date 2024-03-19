@@ -1,4 +1,21 @@
 .pokedex {
     background-color: var(--color-blue);
-    height: 115vh;
+    height: 125vh;
+}
+
+.pokedex > .title > h2 {
+    background-color: var(--color-blue);
+}
+
+.help-text {
+    margin: 4px 230px;
+    color: #444343;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .help-text {
+        font-size: 0.8rem;
+        margin: 4px 30px;
+    }
 }

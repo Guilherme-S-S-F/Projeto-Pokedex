@@ -1,0 +1,20 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.title > h2 {
+    font-size: 3rem;
+    background-color: var(--color-dark-blue);
+    text-align: center;
+    margin-bottom: 4px;
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .title > h2 {
+        font-size: 2rem;
+    }
+}

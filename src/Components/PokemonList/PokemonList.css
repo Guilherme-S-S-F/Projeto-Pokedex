@@ -1,4 +1,5 @@
 .pokemon-list {
+    position: relative;
     padding: 60px;
     margin: 0px 200px 30px 200px;
     background-color: #fff;
@@ -6,6 +7,11 @@
     height: 60vh;
     overflow-y: scroll;
     box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-list > img {
+    position: absolute;
+    height: 25px;
 }
 
 .pokemon-list > .container {
@@ -31,6 +37,6 @@
 @media (max-width: 1024px) {
     .pokemon-list {
         padding: 20px;
-        margin: 20px 20px;
+        margin: 0px 20px 20px 20px;
     }
 }
