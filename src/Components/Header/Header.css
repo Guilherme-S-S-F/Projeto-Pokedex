@@ -1,6 +1,7 @@
 .header {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 110px;
     background-color: var(--color-yellow);
     position: relative;
@@ -10,18 +11,38 @@
     height: 100px;
 }
 
-.header > img:nth-child(2) {
+.header > .header-pokedex {
     position: absolute;
     left: 10px;
     top: 30px;
     height: 50px;
 }
 
-.header > img:last-child {
+.header > .header-account {
     position: absolute;
     right: 10px;
     top: 20px;
     height: 70px;
     border-radius: 50%;
     background-color: var(--color-orange);
+}
+
+@media (max-width: 450px) {
+    .header {
+        height: 80px;
+    }
+
+    .header > img:first-child {
+        height: 60px;
+    }
+
+    .header > .header-pokedex {
+        height: 40px;
+        top: 20px;
+    }
+
+    .header > .header-account {
+        top: 15px;
+        height: 50px;
+    }
 }

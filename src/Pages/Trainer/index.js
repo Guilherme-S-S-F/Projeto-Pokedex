@@ -10,7 +10,7 @@ export default function Trainer( { goToPokedex, trainer } ) {
 
     return (
         <section className='trainer-page'>
-            <Header />
+            <Header buttonVisibility={true} />
             <div className='trainer-and-list'>
                 <div className='trainer-page-profile'>
                     <h2>Eu</h2>

@@ -21,8 +21,8 @@ export default function Pokedex({pokemonClicked}) {
 
     return (
         <section className='pokedex'>
-            <Header/>
-            <SearchButton buttonClick={e => searchClick(e)}/>
+            <Header buttonVisibility={true} />
+            <SearchButton buttonClick={e => searchClick(e)} />
             <PokemonList list={pokemons} pokemonClicked={e => onPokemonClicked(e)} />
         </section>
     );

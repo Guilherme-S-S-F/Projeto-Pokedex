@@ -1,5 +1,4 @@
 import PokemonCard from "../PokemonCard";
-import { getPokemonById } from "../Utils";
 import "./PokemonList.css";
 
 export default function PokemonList({list, pokemonClicked}) {

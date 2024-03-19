@@ -14,7 +14,6 @@
     border-radius: 16px;
     outline: none;
     border: 0px;
-
 }
 
 .search-button > button {
@@ -27,14 +26,25 @@
     cursor: pointer;
     outline: none;
 }
+
 .search-button > button > img {
     width: 20px;
     position: relative;
     top: 2px;
     transition: all 0.4s ease;
 }
+
 .search-button > button:hover > img {
     width: 25px;
+}
+
+@media (max-width: 1040px) {
+    .search-button {
+        gap: 20px;
+    }
+    .search-button > input {
+        width: 80%;
+    }
 }
 
 

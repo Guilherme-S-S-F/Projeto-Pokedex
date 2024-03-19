@@ -14,12 +14,12 @@ export default function InitialPokemons() {
 
     return (
         <div className='three-pokemons'>
-            <Header />
+            <Header buttonVisibility={false} />
             <h1>Escolha um Pokemon inicial:</h1>
             <section className='initial-choices'>
-                <PokemonCard />
-                <PokemonCard />
-                <PokemonCard />
+                {initialPokemons.map((pokemon) =>
+                    <PokemonCard id={pokemon.id} base={pokemon.base} name={pokemon.name.english} types={pokemon.type}/>
+                )}
             </section>
         </div>
     )

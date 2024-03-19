@@ -1,7 +1,6 @@
 import pokemons from "./pokedex.json";
 import types from "./pokemonTypes.json";
 
-
 export function getPokemonType(type) {
     return types.find((e) => {return e.type === type})
 }
