@@ -6,18 +6,18 @@ import Title from '../../Components/Title';
 import { useState } from 'react';
 import { getPokemonsByName } from "../../Components/Utils";
 
-export default function Pokedex({ pokemonList,  setPokemons, pokemonClicked }) {
+export default function Pokedex({ pokemonList, setPokemons, pokemonClicked }) {
     const [search, setSearch] = useState('');
 
     const searchClick = (value) => {
         setSearch(value);
-    };
+    }
 
     const onPokemonClicked = (e) => {
         pokemonClicked(e);
     }
 
-    let pokemons = (search !== "") ? getPokemonsByName(search, pokemonList) : pokemonList;    
+    let pokemons = (search !== "") ? getPokemonsByName(search, pokemonList) : pokemonList;
 
     return (
         <section className='pokedex-page'>

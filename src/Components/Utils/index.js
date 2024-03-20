@@ -8,7 +8,7 @@ export function getDomain() {
 }
 
 export function getPokemonType(type) {
-    return types.find((e) => {return e.type === type})
+    return types.find((e) => { return e.type === type })
 }
 
 export function getPokemonList() {

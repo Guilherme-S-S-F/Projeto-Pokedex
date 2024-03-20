@@ -1,7 +1,7 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 
-export default function Header( { buttonVisibility } ) {
+export default function Header({ buttonVisibility }) {
 
     return (
         <header className="header">
@@ -10,7 +10,7 @@ export default function Header( { buttonVisibility } ) {
                 <Link to="/pokedex"><img className="header-pokedex" draggable={false} src='./images/pokedex.png' alt="Pokedex" /></Link>
                 <Link to="/trainer"><img className="header-account" draggable={false} src='./images/account.png' alt="Conta" /></Link>
             </>
-            : null}
+                : null}
         </header>
     );
 }

@@ -3,7 +3,7 @@ import LoginForms from '../../Components/LoginForms';
 import InitialPokemons from '../../Components/InitialPokemons';
 import { useState } from 'react';
 
-export default function Login( { setNewTrainer, trainer, pokemonChosen} ) {
+export default function Login({ setNewTrainer, trainer, pokemonChosen }) {
 
     const [changePage, setChangePage] = useState(false);
 
@@ -12,13 +12,13 @@ export default function Login( { setNewTrainer, trainer, pokemonChosen} ) {
     }
 
     function advancePage(changePage) {
-        if(changePage) {
+        if (changePage) {
             return (
                 <InitialPokemons pokemonChosen={e => onPokemonChosen(e)} />
             );
         } else {
-            return(
-                <LoginForms setNewTrainer={setNewTrainer} trainer={trainer} advancePage={setChangePage}/>
+            return (
+                <LoginForms setNewTrainer={setNewTrainer} trainer={trainer} advancePage={setChangePage} />
             );
         }
     }

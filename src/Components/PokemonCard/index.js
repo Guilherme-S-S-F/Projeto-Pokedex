@@ -2,31 +2,31 @@ import "./PokemonCard.css"
 import PokemonType from "../PokemonType";
 import { getPokemonType } from "../Utils";
 
-export default function PokemonCard({name, types, base, pokemonClicked, id, chosen, buttonText}) {
+export default function PokemonCard({ name, types, base, pokemonClicked, id, chosen, buttonText }) {
     const addZeros = (num) => {
         num = num.toString();
         let len = num.length;
-        if(len !== 3) {
-            (len === 1) ? num="00"+num : num="0"+num;
-        } 
+        if (len !== 3) {
+            (len === 1) ? num = "00" + num : num = "0" + num;
+        }
         return num
     }
 
     const onPokemonClicked = () => {
-        if(pokemonClicked !== undefined)
+        if (pokemonClicked !== undefined)
             pokemonClicked(id);
     }
 
     let imagePath = "./images/Pokemons/" + addZeros(id) + ".png";
     return (
-        <div className={"pokemon-card" + ((chosen)? " active" : "")}>
-            <img draggable={false} src={imagePath} alt="Imagem do pokémon"/>
+        <div className={"pokemon-card" + ((chosen) ? " active" : "")}>
+            <img draggable={false} src={imagePath} alt="Imagem do pokémon" />
             <div>
                 <div className="basic-info">
                     <h3>{name}</h3>
                     <div className="types">
-                    {types.map((type, index) => (                        
-                        <PokemonType key={index} type={type} color={getPokemonType(type).color} textColor={getPokemonType(type).textColor}/>))}            
+                        {types.map((type, index) => (
+                            <PokemonType key={index} type={type} color={getPokemonType(type).color} textColor={getPokemonType(type).textColor} />))}
                     </div>
                 </div>
                 <div className="info">
@@ -37,7 +37,7 @@ export default function PokemonCard({name, types, base, pokemonClicked, id, chos
                     <p>Sp. Defense {base['Sp. Defense']}</p>
                     <p>Speed {base['Speed']}</p>
                 </div>
-                <div className="button-area"><button onClick={onPokemonClicked} hidden={buttonText===""? true : false}>{buttonText}</button></div>
+                <div className="button-area"><button onClick={onPokemonClicked} hidden={buttonText === "" ? true : false}>{buttonText}</button></div>
             </div>
         </div>
     );

@@ -32,7 +32,7 @@ function App() {
   function setNewTrainer(name, gender) {
     setTrainer({
       name: name.trimStart(),
-      gender:gender,
+      gender: gender,
       pokemons: []
     });
   }
@@ -40,10 +40,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element= {<Login pokemonChosen={e => onPokemonChoosed(e)} setNewTrainer={setNewTrainer} trainer={trainer} />}/>
-        <Route path="/pokedex" element= {<Pokedex pokemonList={allPokemons} pokemonClicked={e => onPokemonClicked(e)} />}/>
-        <Route path="/trainer" element= {<Trainer trainer={trainer}/>}/>
-        <Route path="*" element= {<NotFound />}/>
+        <Route path="/" element={<Login pokemonChosen={e => onPokemonChoosed(e)} setNewTrainer={setNewTrainer} trainer={trainer} />} />
+        <Route path="/pokedex" element={<Pokedex pokemonList={allPokemons} pokemonClicked={e => onPokemonClicked(e)} />} />
+        <Route path="/trainer" element={<Trainer trainer={trainer} />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
