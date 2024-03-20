@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import Header from '../../Components/Header';
-import PokemonCard from '../../Components/PokemonCard';
-import { getPokemonById } from '../../Components/Utils';
 import './InitialPokemons.css';
+import Header from '../Header';
+import PokemonCard from '../PokemonCard';
+import Title from '../Title';
+import { useState } from 'react';
+import { getPokemonById } from '../Utils';
 import { Link } from 'react-router-dom';
 
 export default function InitialPokemons({pokemonChosen}) {
@@ -24,7 +25,7 @@ export default function InitialPokemons({pokemonChosen}) {
     return (
         <div className='three-pokemons'>
             <Header buttonVisibility={false} />
-            <h1>Escolha um Pokemon inicial:</h1>
+            <Title text="Escolha um pokémon inicial: " />
             <section className='initial-choices'>
                 {initialPokemons.map((pokemon) =>
                     <PokemonCard buttonText={"Escolher"} chosen={(chosen === pokemon.id)} key={pokemon.id} pokemonClicked={e => onPokemonClick(e)} id={pokemon.id} base={pokemon.base} name={pokemon.name.english} types={pokemon.type}/>

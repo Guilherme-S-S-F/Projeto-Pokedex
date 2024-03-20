@@ -1,8 +1,8 @@
+import "./PokemonCard.css"
 import PokemonType from "../PokemonType";
 import { getPokemonType } from "../Utils";
-import "./PokemonCard.css"
 
-export default function PokemonCard({name, types, base, pokemonClicked,id, chosen, buttonText}) {
+export default function PokemonCard({name, types, base, pokemonClicked, id, chosen, buttonText}) {
     const addZeros = (num) => {
         num = num.toString();
         let len = num.length;
@@ -20,7 +20,7 @@ export default function PokemonCard({name, types, base, pokemonClicked,id, chose
     let imagePath = "./images/Pokemons/" + addZeros(id) + ".png";
     return (
         <div className={"pokemon-card" + ((chosen)? " active" : "")}>
-            <img draggable={false} src={imagePath}/>
+            <img draggable={false} src={imagePath} alt="Imagem do pokémon"/>
             <div>
                 <div className="basic-info">
                     <h3>{name}</h3>

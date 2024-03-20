@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import './LoginForms.css';
 import SwitchFemaleMale from '../SwitchFemaleMale';
 import InputText from '../InputText';
 import DoctorDialog from '../DoctorDialog';
+import { useState } from 'react';
 
 export default function LoginForms( { setNewTrainer, trainer, advancePage } ) {
 
@@ -25,8 +25,8 @@ export default function LoginForms( { setNewTrainer, trainer, advancePage } ) {
     return(
         <section className='login-page'>
             <div className='welcome'>
-                <img draggable={false} src='./images/pokemon-logo-4-1.png'/>
-                <img draggable={false} src='./images/pikachuLogin.png'/>
+                <img draggable={false} src='./images/pokemon-logo-4-1.png' alt='Logo do Pokémon'/>
+                <img draggable={false} src='./images/pikachuLogin.png' alt='Pikachu acenando'/>
             </div>
             <div className='login-data'>
                 <div className='login-card'>
