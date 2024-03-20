@@ -2,11 +2,10 @@ import './Pokedex.css';
 import SearchButton from '../../Components/SearchButton';
 import PokemonList from '../../Components/PokemonList';
 import { useEffect, useState } from 'react';
-import { getPokemonList, getPokemonsByName } from "../../Components/Utils";
+import {  getPokemonsByName } from "../../Components/Utils";
 import Header from '../../Components/Header';
 import Title from '../../Components/Title';
-import { useState } from 'react';
-import { getPokemonsByName } from "../../Components/Utils";
+import { useNavigate } from 'react-router-dom';
 
 export default function Pokedex({trainer, pokemonList,  setPokemons, pokemonClicked }) {
     const [search, setSearch] = useState('');

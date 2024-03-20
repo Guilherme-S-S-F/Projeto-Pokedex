@@ -5,7 +5,6 @@ import Trainer from "./Pages/Trainer";
 import NotFound from "./Pages/NotFound";
 import { useState } from "react";
 import { getPokemonById, getPokemonList } from "./Components/Utils";
-import CapturingPokemon from "./Pages/CapturingPokemon";
 
 function App() {
   const [allPokemons, setPokemons] = useState(getPokemonList());
@@ -46,7 +45,6 @@ function App() {
         <Route path="/" element= {<Login pokemonChosen={e => onPokemonChoosed(e)} setNewTrainer={setNewTrainer} trainer={trainer} />}/>
         <Route path="/pokedex" element= {<Pokedex pokemonList={allPokemons} trainer={trainer} pokemonClicked={e => onPokemonClicked(e)} />}/>
         <Route path="/trainer" element= {<Trainer trainer={trainer}/>}/>
-        <Route path="/Capturing" element={<CapturingPokemon />}/>
         <Route path="*" element= {<NotFound />}/>
       </Routes>
     </BrowserRouter>
