@@ -1,17 +1,18 @@
-import { BrowserRouter, Route, Routes, redirect, useNavigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
 import { useState } from "react";
 import Pokedex from "./Pages/Pokedex";
 import Trainer from "./Pages/Trainer";
 import NotFound from "./Pages/NotFound";
-import { getDomain, getPokemonById } from "./Components/Utils";
+import { getPokemonById } from "./Components/Utils";
 import CapturingPokemon from "./Pages/CapturingPokemon";
 
 function App() {
   const [trainer, setTrainer] = useState({
     name: '',
     gender: false,
-    pokemons: []
+    pokemons: [],
+    logged: false
   });
 
   const onPokemonClicked = (value) => {
@@ -30,7 +31,8 @@ function App() {
     setTrainer({
       name: name.trimStart(),
       gender:gender,
-      pokemons: []
+      pokemons: [],
+      logged: true
     });
   }
 
@@ -38,7 +40,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element= {<Login pokemonChosen={e => onPokemonChoosed(e)} setNewTrainer={setNewTrainer} trainer={trainer} />}/>
-        <Route path="/pokedex" element= {<Pokedex pokemonClicked={e => onPokemonClicked(e)} />}/>
+        <Route path="/pokedex" element= {<Pokedex trainer={trainer} pokemonClicked={e => onPokemonClicked(e)} />}/>
         <Route path="/Trainer" element= {<Trainer trainer={trainer}/>}/>
         <Route path="/Capturing" element={<CapturingPokemon />}/>
         <Route path="*" element= {<NotFound />}/>

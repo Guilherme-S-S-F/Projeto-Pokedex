@@ -3,10 +3,6 @@ import types from "./pokemonTypes.json";
 
 const domain = "http://localhost:3000/";
 
-export function getDomain() {
-    return domain;
-}
-
 export function getPokemonType(type) {
     return types.find((e) => {return e.type === type})
 }

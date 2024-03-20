@@ -1,14 +1,22 @@
 import SearchButton from '../../Components/SearchButton';
 import './Pokedex.css';
 import PokemonList from '../../Components/PokemonList';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getPokemonList, getPokemonsByName } from "../../Components/Utils";
 import Header from '../../Components/Header';
 import Title from '../../Components/Title';
 import { useNavigate } from 'react-router-dom';
 
-export default function Pokedex({ pokemonClicked }) {
+export default function Pokedex({ trainer, pokemonClicked }) {
     const [search, setSearch] = useState('');
+    const nav = useNavigate();
+
+    //If user is not logged redirect him to home
+    useEffect( () => {
+        if(!trainer.logged) {
+            nav("/");
+        }
+    });
 
     const searchClick = (value) => {
         setSearch(value);
@@ -26,7 +34,6 @@ export default function Pokedex({ pokemonClicked }) {
             <div className='pokedex'>
                 <Title text="Pokédex" />
                 <SearchButton buttonClick={e => searchClick(e)} />
-                <p className="help-text">(Para capturar um pokémon, clique duas vezes. Para ver os status, clique uma vez.)</p>
                 <PokemonList buttonText={"Capturar"} list={pokemons} pokemonClicked={e => onPokemonClicked(e)} />
             </div>
         </section>
