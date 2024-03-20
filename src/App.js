@@ -27,6 +27,9 @@ function App() {
   const onPokemonChoosed = (value) => {
     trainer.pokemons = [];
     trainer.pokemons.push(getPokemonById(value));
+    setPokemons(allPokemons.filter((pokemon) => {
+      return pokemon.id === value ? null : pokemon;
+    }));
     setTrainer(trainer);
   }
 
