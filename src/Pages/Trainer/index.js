@@ -1,10 +1,20 @@
 import './Trainer.css';
+import { useEffect } from 'react';
 import Header from '../../Components/Header';
 import PokemonList from '../../Components/PokemonList';
 import Title from '../../Components/Title';
 import TrainerProfile from '../../Components/TrainerProfile';
+import { useNavigate } from 'react-router-dom';
 
-export default function Trainer({ trainer }) {
+export default function Trainer( { trainer } ) {
+    const nav = useNavigate();
+
+     //If user is not logged redirect him to home
+     useEffect( () => {
+        if(!trainer.logged) {
+            nav("/");
+        }
+    });
 
     return (
         <section className='trainer-page'>
