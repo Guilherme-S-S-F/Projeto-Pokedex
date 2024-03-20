@@ -1,9 +1,9 @@
+import './Trainer.css';
 import { useEffect } from 'react';
 import Header from '../../Components/Header';
 import PokemonList from '../../Components/PokemonList';
 import Title from '../../Components/Title';
 import TrainerProfile from '../../Components/TrainerProfile';
-import './Trainer.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function Trainer( { trainer } ) {
@@ -26,7 +26,7 @@ export default function Trainer( { trainer } ) {
                 </div>
                 <div className='trainer-pokemon-list'>
                     <Title text="Meus Pokémons" />
-                    <PokemonList buttonText={""} pokemonClicked={e => {}} onDoubleClick={false} list={trainer.pokemons} />
+                    <PokemonList buttonText={""} pokemonClicked={e => {}} onDoubleClick={false} pokemonList={trainer.pokemons} />
                 </div>
             </div>
         </section>

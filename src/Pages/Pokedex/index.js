@@ -1,13 +1,14 @@
-import SearchButton from '../../Components/SearchButton';
 import './Pokedex.css';
+import SearchButton from '../../Components/SearchButton';
 import PokemonList from '../../Components/PokemonList';
 import { useEffect, useState } from 'react';
 import { getPokemonList, getPokemonsByName } from "../../Components/Utils";
 import Header from '../../Components/Header';
 import Title from '../../Components/Title';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { getPokemonsByName } from "../../Components/Utils";
 
-export default function Pokedex({ trainer, pokemonClicked }) {
+export default function Pokedex({trainer, pokemonList,  setPokemons, pokemonClicked }) {
     const [search, setSearch] = useState('');
     const nav = useNavigate();
 
@@ -26,7 +27,7 @@ export default function Pokedex({ trainer, pokemonClicked }) {
         pokemonClicked(e);
     }
 
-    let pokemons = (search !== "")? getPokemonsByName(search) : getPokemonList();    
+    let pokemons = (search !== "") ? getPokemonsByName(search, pokemonList) : pokemonList;    
 
     return (
         <section className='pokedex-page'>
@@ -34,6 +35,7 @@ export default function Pokedex({ trainer, pokemonClicked }) {
             <div className='pokedex'>
                 <Title text="Pokédex" />
                 <SearchButton buttonClick={e => searchClick(e)} />
+                <PokemonList buttonText={"Capturar"} setPokemons={setPokemons} pokemonList={pokemons} pokemonClicked={e => onPokemonClicked(e)} />
                 <PokemonList buttonText={"Capturar"} list={pokemons} pokemonClicked={e => onPokemonClicked(e)} />
             </div>
         </section>

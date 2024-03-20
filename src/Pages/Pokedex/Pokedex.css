@@ -14,15 +14,3 @@
 .pokedex > .title > h2 {
     background-color: var(--color-blue);
 }
-
-.help-text {
-    color: #444343;
-    font-weight: 700;
-}
-
-@media (max-width: 1024px) {
-    .help-text {
-        font-size: 0.8rem;
-        margin: 0px 12px 4px 12px;
-    }
-}

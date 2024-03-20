@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import LoginForms from '../../Components/LoginForms';
-import InitialPokemons from '../InitialPokemons';
 import './Login.css';
+import LoginForms from '../../Components/LoginForms';
+import InitialPokemons from '../../Components/InitialPokemons';
+import { useState } from 'react';
 
 export default function Login( { setNewTrainer, trainer, pokemonChosen} ) {
 

@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 85vh;
+    min-height: 90vh;
     background-color: var(--color-dark-blue);
 }
 
@@ -37,14 +37,12 @@
     height: 400px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
 
     .trainer-pokemon-list > .pokemon-list {
         padding: 20px 0px;
     }
-}
-
-@media (max-width: 700px) {
+    
     .trainer-page > div {
         flex-direction: column;
     }
@@ -64,4 +62,3 @@
         height: 600px;
     }
 }
-

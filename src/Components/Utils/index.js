@@ -17,8 +17,8 @@ export function getPokemonById(id) {
     })[0];
 }
 
-export function getPokemonsByName(name) {
-    return pokemons.filter((pokemon) => {
+export function getPokemonsByName(name, pokemonList) {
+    return pokemonList.filter((pokemon) => {
         return pokemon.name.english.toLowerCase().includes(name.toLowerCase());
     });
 }
