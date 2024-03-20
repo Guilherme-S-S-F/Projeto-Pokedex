@@ -35,7 +35,6 @@ export default function Pokedex({trainer, pokemonList,  setPokemons, pokemonClic
                 <Title text="Pokédex" />
                 <SearchButton buttonClick={e => searchClick(e)} />
                 <PokemonList buttonText={"Capturar"} setPokemons={setPokemons} pokemonList={pokemons} pokemonClicked={e => onPokemonClicked(e)} />
-                <PokemonList buttonText={"Capturar"} list={pokemons} pokemonClicked={e => onPokemonClicked(e)} />
             </div>
         </section>
     );
