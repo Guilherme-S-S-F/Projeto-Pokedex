@@ -3,7 +3,7 @@
     padding: 10px;
     overflow: hidden;
     background-color: #fff;
-    text-align: left;
+    text-align: center;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
 }
 .pokemon-card.active {
@@ -11,9 +11,8 @@
 }
 
 .pokemon-card > img {
-    background-color: beige;
     border-radius: 8px;
-    width: 100%;
+    
 }
 
 .pokemon-card .types {
