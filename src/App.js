@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
 import Pokedex from "./Pages/Pokedex";
 import Trainer from "./Pages/Trainer";
@@ -43,14 +43,14 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/Projeto-Pokedex/" element={<Login pokemonChosen={e => onPokemonChoosed(e)} setNewTrainer={setNewTrainer} trainer={trainer} />} />
         <Route path="/Projeto-Pokedex/pokedex" element={<Pokedex pokemonList={allPokemons} trainer={trainer} pokemonClicked={e => onPokemonClicked(e)} />} />
         <Route path="/Projeto-Pokedex/trainer" element={<Trainer trainer={trainer} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
