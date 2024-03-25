@@ -17,7 +17,7 @@ export default function PokemonCard({ name, types, base, pokemonClicked, id, cho
             pokemonClicked(id);
     }
 
-    let imagePath = "./Projeto-Pokedex/images/Pokemons/" + addZeros(id) + ".png";
+    let imagePath = "./images/Pokemons/" + addZeros(id) + ".png";
     return (
         <div className={"pokemon-card" + ((chosen) ? " active" : "")}>
             <img draggable={false} src={imagePath} alt="Imagem do pokémon" />
