@@ -45,9 +45,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login pokemonChosen={e => onPokemonChoosed(e)} setNewTrainer={setNewTrainer} trainer={trainer} />} />
-        <Route path="/pokedex" element={<Pokedex pokemonList={allPokemons} trainer={trainer} pokemonClicked={e => onPokemonClicked(e)} />} />
-        <Route path="/trainer" element={<Trainer trainer={trainer} />} />
+        <Route path="/Projeto-Pokedex/" element={<Login pokemonChosen={e => onPokemonChoosed(e)} setNewTrainer={setNewTrainer} trainer={trainer} />} />
+        <Route path="/Projeto-Pokedex/pokedex" element={<Pokedex pokemonList={allPokemons} trainer={trainer} pokemonClicked={e => onPokemonClicked(e)} />} />
+        <Route path="/Projeto-Pokedex/trainer" element={<Trainer trainer={trainer} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

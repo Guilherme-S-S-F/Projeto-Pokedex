@@ -28,7 +28,8 @@ export default function InitialPokemons({ pokemonChosen }) {
             <Title text="Escolha um pokémon inicial: " />
             <section className='initial-choices'>
                 {initialPokemons.map((pokemon) =>
-                    <PokemonCard buttonText={"Escolher"} chosen={(chosen === pokemon.id)} key={pokemon.id} pokemonClicked={e => onPokemonClick(e)} id={pokemon.id} base={pokemon.base} name={pokemon.name.english} types={pokemon.type} />
+                    <PokemonCard buttonText={"Escolher"} chosen={(chosen === pokemon.id)} key={pokemon.id}
+                     pokemonClicked={e => onPokemonClick(e)} id={pokemon.id} base={pokemon.base} name={pokemon.name.english} types={pokemon.type} />
                 )}
             </section>
             <Link to="/Trainer"><button className='button-continue' disabled={(chosen === -1)}>Continuar</button></Link>

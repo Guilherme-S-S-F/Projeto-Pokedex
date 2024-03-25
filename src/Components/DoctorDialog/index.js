@@ -4,13 +4,13 @@ export default function DoctorDialog({ name, changeToInitial }) {
     return (
         <div className='doctor-dialog'>
             <div className='balloon'>
-                <img draggable={false} src='./images/dialog-balloon.png' alt='Balão de diálogo'/>
+                <img draggable={false} src='./Projeto-Pokedex/images/dialog-balloon.png' alt='Balão de diálogo'/>
                 <div className='dialog-text'>
                     <p>Olá, {name}!<br />Antes de iniciar a jornada,<br /> você deve escolher um pokémon inicial!</p>
                     <button onClick={evento => changeToInitial(true)}>Escolher</button>
                 </div>
             </div>
-            <img draggable={false} src='./images/professor_oak.png' alt="Professor Orvalho" />
+            <img draggable={false} src='./Projeto-Pokedex/images/professor_oak.png' alt="Professor Orvalho" />
         </div>
     );
 }

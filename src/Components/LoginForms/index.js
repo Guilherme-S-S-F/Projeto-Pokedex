@@ -25,8 +25,8 @@ export default function LoginForms({ setNewTrainer, trainer, advancePage }) {
     return (
         <section className='login-page'>
             <div className='welcome'>
-                <img draggable={false} src='./images/pokemon-logo-4-1.png' alt='Logo do Pokémon' />
-                <img draggable={false} src='./images/pikachuLogin.png' alt='Pikachu acenando' />
+                <img draggable={false} src='./Projeto-Pokedex/images/pokemon-logo-4-1.png' alt='Logo do Pokémon' />
+                <img draggable={false} src='./Projeto-Pokedex/images/pikachuLogin.png' alt='Pikachu acenando' />
             </div>
             <div className='login-data'>
                 <div className='login-card'>
